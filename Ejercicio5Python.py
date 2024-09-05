@@ -2,39 +2,39 @@ Temp1 = float(input("Ingrese la temperatura registrada en la mañana: ")) #Temp.
 Temp2 = float(input("Ingrese la temperatura registrada en la tarde: ")) #Temp. tarde
 Temp3 = float(input("Ingrese la temperatura registrada en la noche: ")) #Temp. noche
 
-a,b,c = Temp1,Temp2,Temp3
-j1,j2,j3 = "mañana","tarde","noche"
-d = 0
-if(a>b):
-    if(a<c):
-        a = Temp3
-        c = Temp1
-        j1 = "noche"
-        j3 = "mañana"
-    if(c>b):
-        d = b
-        b = c
-        c = b
-        j2 = "noche"
-        j3 = "tarde"
+if(Temp1>Temp2):
+    if(Temp1>Temp3):
+        if(Temp2>Temp3):
+            a,b,c = Temp1,Temp2,Temp3
+            j1,j2,j3 = "mañana","tarde","noche"
+        else:
+            a,b,c = Temp1,Temp3,Temp2
+            j1,j2,j3 = "mañana","noche","tarde"
+    else: 
+        if(Temp1>Temp2):
+            a,b,c = Temp3,Temp1,Temp2
+            j1,j2,j3 = "noche","mañana","tarde"
+        else:
+            a,b,c = Temp3,Temp2,Temp1
+            j1,j2,j3 = "noche","tarde","mañana"
 else:
-    a = Temp2
-    b = Temp1
-    j1 = "tarde"
-    j2 = "mañana"
-    if(a<c):
-        d = a
-        a = c
-        c = d
-        j1 = "noche"
-        j3 = "mañana"
-    if(b<c):
-        d = b
-        b = c
-        c = d
-        j2 = "noche"
-        j3 = "tarde"
+    if(Temp2>Temp3):
+        if(Temp1>Temp3):
+            a,b,c = Temp2,Temp1,Temp3
+            j1,j2,j3 = "tarde","mañana","noche"
+        else:
+            a,b,c = Temp2,Temp3,Temp1
+            j1,j2,j3 = "tarde","noche","mañana"
+    else:
+        if(Temp1>Temp2):
+            a,b,c = Temp3,Temp1,Temp2
+            j1,j2,j3 = "noche","mañana","tarde"
+        else:
+            a,b,c = Temp3,Temp2,Temp1
+            j1,j2,j3 = "noche","tarde","mañana"
+
 print("La temperatura más alta se dió en la",j1,"con un  valor de",a,"° luego en la",j2,"con una temperatura igual a",b, "° y finalmente en la ",j3,"con una temperatura igual a",c,"°")
+
 #Detectar si es par#
 if(a%2==0):
     print("La temperatura de la",j1,"es par")
@@ -48,10 +48,3 @@ if(c%2==0):
     print("La temperatura de la",j3,"es par")
 else:
     print("La temperatura de la",j3,"es impar")            
-
-     
-          
-
-
-
-     
