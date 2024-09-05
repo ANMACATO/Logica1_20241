@@ -37,6 +37,19 @@ else:
 
 
 print("La temperatura más alta se dió en la",j1,"con un  valor de",a,"° luego en la",j2,"con una temperatura igual a",b, "° y finalmente en la ",j3,"con una temperatura igual a",c,"°")
+#Detectar si es par#
+if(a%2==0):
+    print("La temperatura de la",j1,"es par")
+else:
+    print("La temperatura de la",j1,"es impar")
+if(b%2==0):
+    print("La temperatura de la",j2,"es par")
+else:
+    print("La temperatura de la",j2,"es impar")
+if(c%2==0):
+    print("La temperatura de la",j3,"es par")
+else:
+    print("La temperatura de la",j3,"es impar")            
 
      
           
