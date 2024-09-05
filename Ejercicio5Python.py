@@ -34,8 +34,6 @@ else:
         c = d
         j2 = "noche"
         j3 = "tarde"
-
-
 print("La temperatura más alta se dió en la",j1,"con un  valor de",a,"° luego en la",j2,"con una temperatura igual a",b, "° y finalmente en la ",j3,"con una temperatura igual a",c,"°")
 #Detectar si es par#
 if(a%2==0):
