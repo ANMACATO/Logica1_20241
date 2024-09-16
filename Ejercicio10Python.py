@@ -44,24 +44,30 @@ match (Band):
     case 1:#Recorridos cortos
             if (Tiempo>120 and Dinero<=5000): #Autobus
                  print("Se recomienda tomar el autobus")
-            if (Dinero>20000 and Tiempo<=60): #Taxi
+            elif (Dinero>20000 and Tiempo<=60): #Taxi
                  print("Se recomienda tomar un taxi")
-            if (Dinero<=5000 and Tiempo>60 and Tiempo<=120): #Bicicleta
+            elif (Dinero<=5000 and Tiempo>60 and Tiempo<=120): #Bicicleta
                  print("Se recomienda ir en bicicleta")
-            if (Tiempo>120 and Dinero==0): #Caminando
+            elif (Tiempo>120 and Dinero==0): #Caminando
                  print("Se recomienda ir caminando")                 
+            else:
+                 print("Tome cualquier opción")                 
 
     case 2: #Recorridos medios
         if (Tiempo>120 and Dinero<=5000):
             print("Se recomienda tomar el autobus")
-        if (Tiempo<40 and Dinero>5000 and Dinero<=20000 and Condicion == 2 or Condicion == 3):
+        elif (Tiempo<40 and Dinero>5000 and Dinero<=20000 and Condicion == 2 or Condicion == 3):
              print("Se recomienda tomar el metro")
+        else:
+             print("Tome cualquier opción")                 
                 
     case 3: #Recorridos largos
           if (Tiempo>120 and Dinero<=5000):
                print("Se recomienda tomar el autobus")
-          if (Tiempo<40 and Dinero>5000 and Dinero<=20000 and Condicion == 2 or Condicion == 3):
+          elif (Tiempo<40 and Dinero>5000 and Dinero<=20000 and Condicion == 2 or Condicion == 3):
                print("Se recomienda tomar el metro")
+          else:
+                 print("Tome cualquier opción")
     case _:
           print("Caso imposible")
 
